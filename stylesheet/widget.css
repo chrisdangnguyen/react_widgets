@@ -1,7 +1,3 @@
-#main {
-  /* align-content: center; */
-  /* flex-direction: row; */
-}
 body {
   /* background-color: #fde396; */
   background-image: url("./corkboard.jpg");
@@ -33,6 +29,7 @@ body {
   border-radius: 50px;
   padding: 20px;
   margin: 20px;
+  border: 10px solid cornsilk;
 }
 
 .clock > h1 {
@@ -49,6 +46,8 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: Indie Flower;
+  border: 10px solid cornsilk;
+
 }
 
 .tabs-container > h1 {
