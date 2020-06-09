@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './clock';
 import Tab from './tab';
+import Weather from './weather';
 
 
 const tabNames = [
@@ -16,6 +17,9 @@ function Root() {
       <div className="top-info">
         <Clock/>
         <Tab tabNames={tabNames} />
+      </div>
+      <div className="bottom-info"> 
+        <Weather />
       </div>
     </div>
   )
