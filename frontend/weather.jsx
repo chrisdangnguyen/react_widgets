@@ -26,19 +26,27 @@ class Weather extends React.Component {
     let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
     url += `&appid=${apiKey}`;
 
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange =  () => {
-      if (xmlhttp.readyState == XMLHttpRequest.DONE) { 
-        if (xmlhttp.status == 200) {
-          const data = JSON.parse(xmlhttp.responseText);
-          // console.log(data)
-          this.setState({ weather: data });
-        }
-      }
-    };
-
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+    // let opt = { method: 'GET', headers: {}}
+    fetch(url).then(function(response) {
+      // console.log(response.json());
+      return response.json() //make sure to return the response json 
+    })
+    .then(body => {
+      this.setState({weather: body})
+      console.log(this.state)
+    })
+    // const xmlhttp = new XMLHttpRequest();
+    // xmlhttp.onreadystatechange =  () => {
+    //   if (xmlhttp.readyState == XMLHttpRequest.DONE) { 
+    //     if (xmlhttp.status == 200) {
+    //       const data = JSON.parse(xmlhttp.responseText);
+    //       // console.log(data)
+    //       this.setState({ weather: data });
+    //     }
+    //   }
+    // };
+    // xmlhttp.open("GET", url, true);
+    // xmlhttp.send();
   }
 
 
