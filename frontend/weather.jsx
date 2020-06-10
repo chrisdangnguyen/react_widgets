@@ -33,7 +33,7 @@ class Weather extends React.Component {
     })
     .then(body => {
       this.setState({weather: body})
-      console.log(this.state)
+      // console.log(this.state)
     })
     // const xmlhttp = new XMLHttpRequest();
     // xmlhttp.onreadystatechange =  () => {
