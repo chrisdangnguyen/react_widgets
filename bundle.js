@@ -693,7 +693,7 @@ var Weather = /*#__PURE__*/function (_React$Component) {
       var apiKey = '6aa6a398fa5f6f43437ec77e71c777c9'; //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
       //combine all values to equate to the provided api link
 
-      var url = "http://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(lon);
+      var url = "https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(lon);
       url += "&appid=".concat(apiKey); // let opt = { method: 'GET', headers: {}}
 
       fetch(url).then(function (response) {

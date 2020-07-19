@@ -23,7 +23,7 @@ class Weather extends React.Component {
     const apiKey = '6aa6a398fa5f6f43437ec77e71c777c9'
     //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
     //combine all values to equate to the provided api link
-    let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}`;
     url += `&appid=${apiKey}`;
 
     // let opt = { method: 'GET', headers: {}}
