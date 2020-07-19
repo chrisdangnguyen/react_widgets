@@ -8,16 +8,16 @@ import dndData from './data';
 const DragAndDrop = props => {
   const [state, setState] = useState(dndData);
 
-  useEffect(() => {
-    const data = localStorage.getItem('task-items');
-    if (data) {
-      setState(JSON.parse(data))
-    }
-  }, [])
+  // useEffect(() => {
+  //   const data = localStorage.getItem('task-items');
+  //   if (data) {
+  //     setState(JSON.parse(data))
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    localStorage.setItem('task-items', JSON.stringify(state))
-  })
+  // useEffect(() => {
+  //   localStorage.setItem('task-items', JSON.stringify(state))
+  // })
 
   
 
