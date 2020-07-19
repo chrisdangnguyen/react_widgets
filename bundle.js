@@ -334,16 +334,18 @@ var DragAndDrop = function DragAndDrop(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_data__WEBPACK_IMPORTED_MODULE_3__["default"]),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
-      setState = _useState2[1]; // useEffect(() => {
-  //   const data = localStorage.getItem('task-items');
-  //   if (data) {
-  //     setState(JSON.parse(data))
-  //   }
-  // }, [])
-  // useEffect(() => {
-  //   localStorage.setItem('task-items', JSON.stringify(state))
-  // })
+      setState = _useState2[1];
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var data = localStorage.getItem('task-items');
+
+    if (data) {
+      setState(JSON.parse(data));
+    }
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    localStorage.setItem('task-items', JSON.stringify(state));
+  });
 
   var onDragEnd = function onDragEnd(result) {
     var _objectSpread3;
