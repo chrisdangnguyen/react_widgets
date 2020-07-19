@@ -697,25 +697,16 @@ var Weather = /*#__PURE__*/function (_React$Component) {
       url += "&appid=".concat(apiKey); // let opt = { method: 'GET', headers: {}}
 
       fetch(url).then(function (response) {
-        // console.log(response.json());
-        return response.json(); //make sure to return the response json 
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Unable to retrieve');
+        }
       }).then(function (body) {
         _this2.setState({
           weather: body
-        }); // console.log(this.state)
-
-      }); // const xmlhttp = new XMLHttpRequest();
-      // xmlhttp.onreadystatechange =  () => {
-      //   if (xmlhttp.readyState == XMLHttpRequest.DONE) { 
-      //     if (xmlhttp.status == 200) {
-      //       const data = JSON.parse(xmlhttp.responseText);
-      //       // console.log(data)
-      //       this.setState({ weather: data });
-      //     }
-      //   }
-      // };
-      // xmlhttp.open("GET", url, true);
-      // xmlhttp.send();
+        });
+      });
     }
   }, {
     key: "render",
