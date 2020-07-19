@@ -13,7 +13,7 @@ const tabNames = [
 ]
 
 
-function Root() {
+function Widget() {
   return(
     <div className="page-container">
       <div className="top-info">
@@ -31,9 +31,6 @@ function Root() {
   )
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const root = document.getElementById("main");
-  ReactDOM.render(<Root/>, root);
-  
-})
+export default Widget;
+
 
