@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Clock from './clock';
 import Tab from './tab';
 import Weather from './weather';
+import DragAndDrop from './dnd/dnd';
 
 
 const tabNames = [
@@ -10,6 +11,7 @@ const tabNames = [
   {title: 'Second', content : "I'm coming in second!"},
   {title : 'Third', content : "How bout that"}
 ]
+
 
 function Root() {
   return(
@@ -20,6 +22,10 @@ function Root() {
       </div>
       <div className="bottom-info"> 
         <Weather />
+        {/* <Weather /> */}
+      </div>
+      <div>
+        <DragAndDrop />
       </div>
     </div>
   )

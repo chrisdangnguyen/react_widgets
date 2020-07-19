@@ -1,6 +1,7 @@
 body {
   /* background-color: #fde396; */
   background-image: url("./corkboard.jpg");
+  font-family: Indie Flower;
   /* justify-content: space-around; */
 }
 .page-container{
@@ -162,4 +163,50 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+
+/* ---- DND */
+
+.dnd-container {
+  display: flex;
+  margin: 20px;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+}
+
+.column {
+  border: 10px solid cornsilk;
+  border-radius: 20px;
+  width: 100%;
+  min-width: 350px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: wheat;
+
+}
+
+.column-title {
+  padding: 8px;
+  color: black;
+  font-size: 28px;
+
+}
+
+.column-container {
+  padding: 8px;
+  flex-grow: 1;
+  min-height: 100px;
+  border-radius: 0 0 10px 10px;
+  /* background-color: lightgray; */
+
+}
+
+.task-container {
+  margin-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 8px;
 }
